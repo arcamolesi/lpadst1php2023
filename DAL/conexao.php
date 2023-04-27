@@ -1,4 +1,7 @@
 <?php
+   namespace DAL;
+
+use PDO;
 
 class Conexao{
     private static $dbNome='servicos'; 
@@ -17,9 +20,9 @@ class Conexao{
         if (self::$cont == null){
             try{
               // self::$cont = new PDO("mysql:host=localhost;dbname=servicos", "root", "");
-               self::$cont = new PDO("mysql:host=". self::$dbHost .";dbname=" . self::$dbNome , self::$dbUsuario, self::$dbSenha);
+               self::$cont = new  \PDO("mysql:host=". self::$dbHost .";dbname=" . self::$dbNome , self::$dbUsuario, self::$dbSenha);
             }
-            catch (PDOException $exception) {
+            catch (\PDOException $exception) {
                 die ($exception->getMessage());
             }
  

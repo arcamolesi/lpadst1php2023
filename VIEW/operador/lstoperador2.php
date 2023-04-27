@@ -1,8 +1,10 @@
-<?php 
-    include 'conexao.php';
-    $sql = "select * from operador;";
-    $con = Conexao::conectar(); 
-    $lstOperador = $con->query($sql); 
+<?php
+
+use DAL\dalOperador;
+
+  include '../../DAL/dalOperador.php'; 
+  $dal = new \dal\dalOperador(); 
+  $lstOperador = $dal->Select(); 
 ?>
 
 
@@ -32,10 +34,10 @@
             foreach ($lstOperador as $operador){
         ?>
             <tr>
-                <td><?php echo $operador['id']; ?></td>
-                <td><?php echo $operador['nome']; ?></td>
-                <td><?php echo $operador['aniversario']; ?></td>
-                <td><?php echo $operador['salario']; ?></td>
+                <td><?php echo $operador->getId(); ?></td>
+                <td><?php echo $operador->getNome(); ?></td>
+                <td><?php echo $operador->getAniversario(); ?></td>
+                <td><?php echo $operador->getSalario(); ?></td>
             </tr>
         <?php 
             }
