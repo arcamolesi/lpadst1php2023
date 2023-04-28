@@ -1,8 +1,7 @@
 <?php
     namespace DAL; 
-    include 'conexao.php';
-
-    include '../MODEL/Operador.php';
+    include_once 'C:\xampp\htdocs\lpadst1php2023\DAL\conexao.php';
+    include_once 'C:\xampp\htdocs\lpadst1php2023\MODEL\Operador.php';
     
     
     class dalOperador{
@@ -22,14 +21,18 @@
     
             $operador->setId($linha['id']);
             $operador->setNome($linha['nome']); 
-            $operador->setAniversario($linha['aniversario']); 
+
+            $data = date_create($linha['aniversario']);
+            $operador->setAniversario(date_format($data, 'd-m-Y')); 
+
             $operador->setSalario($linha['salario']); 
     
             $lstOperador[] = $operador; 
 
-            return $lstOperador;
+           
         }
-       
+
+        return $lstOperador;
 
 
 

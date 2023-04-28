@@ -7,13 +7,19 @@ class Operador {
     private ?string $aniversario; 
     private ?float $salario; 
 
+   public function __construct()
+   {
+    
+   }
+
+    /*
     public function __construct(?int $id, ?string$nome, ?string $aniversario, ?float $salario)
     {
         $this->id = $id; 
         $this->nome = $nome; 
         $this->aniversario = $aniversario; 
         $this->salario = $salario; 
-    }
+    }*/
 
     public function getId(){
         return $this->id; 
@@ -37,7 +43,7 @@ class Operador {
         return $this->aniversario; 
     }
     
-    public function setAniversario(int $aniversario){
+    public function setAniversario(string $aniversario){
         $this->aniversario = $aniversario; 
     }
 
@@ -46,7 +52,7 @@ class Operador {
         return $this->salario;  
     }
     
-    public function setSalario(int $salario){
+    public function setSalario(float $salario){
         $this->salario = $salario; 
     }
 

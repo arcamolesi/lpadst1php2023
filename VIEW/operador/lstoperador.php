@@ -1,5 +1,7 @@
 <?php
-    include './DAL/conexao.php';
+    echo __DIR__; 
+     
+    include 'C:\xampp\htdocs\lpadst1php2023\DAL\conexao.php';
     use DAL\Conexao;
     $sql = "select * from operador;";
     $con = Conexao::conectar(); 
