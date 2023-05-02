@@ -24,7 +24,6 @@ use DAL\dalOperador;
 <body>
     <h1>Listar Operadores</h1>
 
-    <?php echo "Total de registros: " . count($lstOperador);?> 
 
     <table class="striped red lighten-2" >
         <tr>
@@ -37,10 +36,10 @@ use DAL\dalOperador;
             foreach ($lstOperador as $operador){
         ?>
             <tr>
-                <td><?php echo $operador->getId(); ?></td>
-                <td><?php echo $operador->getNome(); ?></td>
-                <td><?php echo $operador->getAniversario(); ?></td>
-                <td><?php echo "R$" . number_format($operador->getSalario(), 2, ",", "."); ?></td>
+                <td><?php echo $operador['id']; ?></td>
+                <td><?php echo $operador['nome']; ?></td>
+                <td><?php echo $operador['aniversario']; ?></td>
+                <td><?php echo "R$" . number_format($operador['salario'], 2, ",", "."); ?></td>
 
                 
             </tr>

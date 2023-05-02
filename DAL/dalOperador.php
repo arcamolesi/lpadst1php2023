@@ -13,30 +13,8 @@
           $result = $con->query($sql); 
           $con = Conexao::desconectar();
 
-          //return $lstOperador; 
+          return $result; 
    
-          foreach($result as $linha){
-            
-            $operador = new \model\Operador();  
-    
-            $operador->setId($linha['id']);
-            $operador->setNome($linha['nome']); 
-
-            $data = date_create($linha['aniversario']);
-            $operador->setAniversario(date_format($data, 'd-m-Y')); 
-
-            $operador->setSalario($linha['salario']); 
-    
-            $lstOperador[] = $operador; 
-
-           
-        }
-
-        return $lstOperador;
-
-
-
-
         }
 
         public function SelectID(int $id){
