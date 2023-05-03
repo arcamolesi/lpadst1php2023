@@ -1,10 +1,10 @@
 <?php
 
-use DAL\dalOperador;
+use BLL\bllOperador;
 
-  include_once '../../DAL/dalOperador.php'; 
-  $dal = new \dal\dalOperador(); 
-  $lstOperador = $dal->Select(); 
+  include_once '../../BLL/blloperador.php'; 
+  $bll = new \BLL\bllOperador; 
+  $lstOperador = $bll->Select(); 
 ?>
 
 
