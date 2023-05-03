@@ -13,7 +13,20 @@
           $result = $con->query($sql); 
           $con = Conexao::desconectar();
 
-          return $result; 
+          //return $result; não vai retornar como linha e sim como objeto
+
+          foreach ($result as $linha){
+              $operador = new \MODEL\Operador(); 
+
+              $operador->setId($linha['id']); 
+              $operador->setNome($linha['nome']);
+              $operador->setAniversario($linha['aniversario']);
+              $operador->setSalario($linha['salario']);
+
+              $lstOperador[] = $operador; 
+          }
+
+          return $lstOperador; 
    
         }
 
