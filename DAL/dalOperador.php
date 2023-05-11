@@ -38,7 +38,15 @@
 
         }
 
-        public function Insert(){
+        public function Insert(\MODEL\Operador $operador){
+            $con = Conexao::conectar(); 
+            $sql = "INSERT INTO operador (nome, aniversario, salario) 
+                   VALUES  ('{$operador->getNome()}', '{$operador->getAniversario()}',
+                            '{$operador->getSalario()}');";
+     
+            $result = $con->query($sql); 
+            $con = Conexao::desconectar();
+            return $result; 
 
         }
 
