@@ -45,7 +45,7 @@
         <button class="waves-effect waves-light btn red" type = "reset">
             Limpar <i class="material-icons">clear_all</i>
         </button>
-        <button class="waves-effect waves-light btn blue" type="button">
+        <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstoperador2.php'">
             Voltar <i class="material-icons">arrow_back</i>
         </button>
         <br>

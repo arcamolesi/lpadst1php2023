@@ -48,7 +48,7 @@
                   <label for="nome" class="black-text bold" >Nome</label>
               </div>
               <div class="input-field col s8">
-                  <input id="aniversario" type="text" name="txtAniversario" value="<?php echo $operador->getAniversario()?>">
+                  <input id="aniversario" type="date" name="txtAniversario" value="<?php echo $operador->getAniversario()?>">
                   <label for="aniversario" class="black-text bold" >Aniversário</label>
               </div>
               <div class="input-field col s8">
@@ -63,8 +63,8 @@
         <button class="waves-effect waves-light btn red" type = "reset">
             Limpar <i class="material-icons">clear_all</i>
         </button>
-        <button class="waves-effect waves-light btn blue" type="button">
-            Voltar <i class="material-icons">arrow_back</i>
+        <button class="waves-effect waves-light btn blue" type="button"  onclick="JavaScript:location.href='lstoperador2.php'">
+            Voltar <i class="material-icons" >arrow_back</i>
         </button>
         <br>
         <br>
