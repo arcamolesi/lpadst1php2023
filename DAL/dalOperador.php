@@ -35,6 +35,20 @@
         }
 
         public function SelectID(int $id){
+            $sql = "select * from operador where id=?;";
+            $pdo = Conexao::conectar(); 
+            $query = $pdo->prepare($sql);
+            $query->execute (array($id));
+            $linha = $query->fetch(\PDO::FETCH_ASSOC);
+            Conexao::desconectar(); 
+
+            $operador = new \MODEL\Operador(); 
+            $operador->setId($linha['id']);
+            $operador->setNome($linha['nome']); 
+            $operador->setAniversario($linha['aniversario']); 
+            $operador->setSalario($linha['salario']); 
+
+            return $operador; 
 
         }
 
@@ -50,8 +64,16 @@
 
         }
 
-        public function Update(){
+        public function Update(\MODEL\Operador $operador){
+            $sql = "UPDATE operador SET nome=?, aniversario=?, salario=? WHERE id=?";
 
+            $pdo = Conexao::conectar(); 
+            $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
+            $query = $pdo->prepare($sql);
+            $result = $query->execute(array($operador->getNome(), $operador->getAniversario(), 
+                                            $operador->getSalario(), $operador->getId()));
+            $con = Conexao::desconectar();
+            return  $result; 
         }
 
         public function Delete(){
