@@ -76,9 +76,16 @@
             return  $result; 
         }
 
-        public function Delete(){
+        public function Delete(int $id){
+            $sql = "DELETE from operador WHERE id=?";
 
-        }   
+            $pdo = Conexao::conectar(); 
+            $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
+            $query = $pdo->prepare($sql);
+            $result = $query->execute(array($id));
+            $con = Conexao::desconectar();
+            return  $result; 
+        }
 
 
     }
