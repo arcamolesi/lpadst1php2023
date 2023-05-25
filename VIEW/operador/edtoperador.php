@@ -5,7 +5,7 @@ $id = $_GET['id'];
 $bll = new  \BLL\bllOperador();
 $operador = $bll->SelectID($id);
 
-echo $operador->getNome();
+//echo $operador->getNome();
 
 
 ?>
@@ -25,12 +25,12 @@ echo $operador->getNome();
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+    <?php include_once '../menu.php'; ?>
+
     <div class="container teal lighten-5 black-text col s12">
         <div class="center orange">
             <h1>Editar Operador</h1>
@@ -79,9 +79,7 @@ echo $operador->getNome();
 
     </div>
 
-
-
-
+    <?php include_once '../footer.php';?>
 </body>
 
 </html>

@@ -28,6 +28,7 @@ $operador = $bll->SelectID($id);
 </head>
 
 <body>
+    <?php include_once '../menu.php'; ?>
     <div class="container blue lighten-5 black-text col s12">
         <div class="center orange">
             <h1>Detalhes de Operador</h1>
@@ -69,9 +70,8 @@ $operador = $bll->SelectID($id);
                                     <?php echo $operador->getId(); ?>">
                 Editar <i class="material-icons">edit</i>
             </button>
-            <button class="waves-effect waves-light btn red" type="button" 
-                    onclick="JavasScript:remover(<?php echo $operador->getId(); ?>);">
-                
+            <button class="waves-effect waves-light btn red" type="button" onclick="JavasScript:remover(<?php echo $operador->getId(); ?>);">
+
                 Remover <i class="material-icons">delete_forever</i>
             </button>
             <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstoperador2.php'">
@@ -82,12 +82,13 @@ $operador = $bll->SelectID($id);
         </div>
 
     </div>
+    <?php include_once '../footer.php';?>
 </body>
 
 </html>
 
 
-<script>
+<script type="text/javascript">
     function remover(id) {
         if (confirm('Excluir o Operador ' + id + '?')) {
             location.href = 'remoperador.php?id=' + id;
