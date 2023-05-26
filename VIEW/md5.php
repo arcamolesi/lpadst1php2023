@@ -1,5 +1,5 @@
 <?php 
     $senha = 'fema@2023'; 
-    echo $senha . " - ". sha1($senha); 
+    echo $senha . " - ". md5($senha); 
 
 ?>
