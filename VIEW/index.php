@@ -22,7 +22,7 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="mySpxript.js"></script>
+    <script src="cod.js"></script>
 </head>
 
 <body>

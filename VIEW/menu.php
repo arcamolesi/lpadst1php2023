@@ -1,3 +1,11 @@
+<?php
+  session_start(); 
+   if (!isset($_SESSION['login']))
+       Header("Location: ../index.php");   
+?> 
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,6 +35,7 @@
                 <li><a href="\lpadst1php2023\view\operador\lstoperador2.php">Operador</a></li>
                 <li><a href="../operador/lstoperador2.php">Equipamentos</a></li>
                 <li><a href="\lpadst1php2023\view\operador\lstoperador2.php">Serviços</a></li>
+                <li><a href="\lpadst1php2023\view\logout.php">LogOut</a></li>
             </ul>
         </div>
     </nav>

@@ -1,5 +1,5 @@
 <?php 
-    $senha = 'fema@2023'; 
+    $senha = 'Fema@2023'; 
     echo $senha . " - ". md5($senha); 
 
 ?>
