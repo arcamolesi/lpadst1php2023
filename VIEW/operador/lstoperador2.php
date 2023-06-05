@@ -3,7 +3,7 @@
 
 use BLL\bllOperador;
 
-include_once  'C:\xampp\htdocs\servicos\BLL\bllOperador.php';
+include_once  'C:\xampp\htdocs\lpadst1php2023\BLL\bllOperador.php';
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
