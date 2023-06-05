@@ -55,6 +55,7 @@
         public function SelectNome(string $nome){
 
             $sql = "select * from operador WHERE nome like  '%" . $nome .  "%' order by nome;";
+         //   $sql = "select * from operador WHERE nome like  '%?%' order by nome;";
   
             $pdo = Conexao::conectar(); 
             $query = $pdo->prepare($sql);
